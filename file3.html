@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You ❤️</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffb6c1; /* light pink */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #330033;
+      font-size: 40px;
+      margin-bottom: 20px;
+      animation: fadeInText 1.5s ease-in forwards;
+      opacity: 0;
+    }
+    @keyframes fadeInText {
+      from { opacity: 0; transform: scale(0.8); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    #heart {
+      display: none;
+      width: 200px;
+      max-width: 80%;
+      margin-top: 20px;
+      animation: fadeInImg 1.2s ease-in forwards;
+    }
+    @keyframes fadeInImg {
+      from { opacity: 0; transform: scale(0.7); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    #finishBtn {
+      display: none;
+      margin-top: 30px;
+      padding: 15px 45px;
+      font-size: 22px;
+      background: linear-gradient(135deg, #ff77aa, #ff3d7f);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      animation: buttonPulse 2.5s infinite;
+    }
+    #finishBtn:hover {
+      transform: scale(1.1);
+    }
+    @keyframes buttonPulse {
+      0%,100%{transform:scale(1)}50%{transform:scale(1.05)}
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Thank you for being so wonderful! 💖</h1>
+    <img id="heart" src="https://media1.tenor.com/m/MgUMKz56Vy4AAAAC/happy-labour-day.gif" alt="Heart Animation">
+
+    <button id="finishBtn" onclick="window.location.href='index.html'">Done</button>
+  </div>
+  <img src="https://media.tenor.com/WoQmh2hWbkYAAAAi/peachcat-cat.gif" alt="cute cat">
+
+  <script>
+    // Show animation and button with delay
+    const heart = document.getElementById('heart');
+    const finishBtn = document.getElementById('finishBtn');
+
+    // Immediately animate the text (h1) with CSS
+    setTimeout(() => {
+      heart.style.display = 'block';
+    }, 1000);
+
+    setTimeout(() => {
+      finishBtn.style.display = 'block';
+    }, 2200);
+  </script>
+</body>
+</html>
